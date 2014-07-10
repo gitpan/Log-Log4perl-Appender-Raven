@@ -3,7 +3,23 @@ Changes from 2013-07-10 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.001 at 2014-07-10 12:02:01 +0000
+version 0.002 at 2014-07-10 13:36:23 +0000
+------------------------------------------
+
+  Change: b186c8baf5e448ab1ed39a249b2a1ba91b4adc9f
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 14:32:40 +0000
+
+    Avoid giant stack trace arguments representations 
+
+  Change: 797369712f549fc12d71f94d7f014cc783ec4ce2
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 13:04:51 +0000
+
+    Fixed abstract 
+
+------------------------------------------
+version 0.001 at 2014-07-10 11:58:45 +0000
 ------------------------------------------
 
   Change: 54bff5f8960ad1d4d11d7d81951f692d36892efc

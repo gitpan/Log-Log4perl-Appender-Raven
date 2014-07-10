@@ -1,9 +1,9 @@
 
 
 This archive contains the distribution Log-Log4perl-Appender-Raven,
-version 0.001:
+version 0.002:
 
-  Store chunks of logs in key/value stores.
+  Send Log Events to Sentry services using Sentry::Raven
 
 This software is copyright (c) 2014 by Jerome Eteve.
 

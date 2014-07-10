@@ -1,5 +1,5 @@
 ---
-abstract: 'Store chunks of logs in key/value stores.'
+abstract: 'Send Log Events to Sentry services using Sentry::Raven'
 author:
   - 'Jerome Eteve <jerome.eteve@gmail.com>'
 build_requires:
@@ -26,4 +26,4 @@ requires:
 resources:
   homepage: https://github.com/jeteve/l4p-appender-raven
   repository: https://github.com/jeteve/l4p-appender-raven.git
-version: 0.001
+version: 0.002

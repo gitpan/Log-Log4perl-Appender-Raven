@@ -1,6 +1,6 @@
 package Log::Log4perl::Appender::Raven;
 {
-  $Log::Log4perl::Appender::Raven::VERSION = '0.001';
+  $Log::Log4perl::Appender::Raven::VERSION = '0.002';
 }
 
 use Moose;
@@ -140,7 +140,9 @@ sub log{
     # We are 4 levels down after the standard Log4perl caller_depth
     my $caller_offset = Log::Log4perl::caller_depth_offset( $Log::Log4perl::caller_depth + 4 );
 
-    my $caller_frames = Devel::StackTrace->new();
+    ## Stringify arguments NOW. This avoid sending huuge objects when
+    ## Serializing this stack trace inside Sentry::Raven
+    my $caller_frames = Devel::StackTrace->new( no_refs => 1);
     {
         ## Remove the frames from the Log4Perl layer.
         my @frames = $caller_frames->frames();
