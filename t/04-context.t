@@ -51,6 +51,7 @@ my $LOGGER = Log::Log4perl->get_logger();
 Log::Log4perl::MDC->put('sentry_tags' , { subsystem => 'testing' });
 Log::Log4perl::MDC->put('sentry_user' , { id => 123  });
 Log::Log4perl::MDC->put('sentry_extra' , { session => { user_id => 'something' , request => 'blabla' } , my_own_log_id => 'foobar'  });
+Log::Log4perl::MDC->put('sentry_http' , { url => 'http://www.example.com/' , method => 'GET'  } );
 
 $LOGGER->error("Some shiny error");
 
@@ -59,6 +60,7 @@ ok($last_call, "Last call was recorded");
 is($last_call->{tags}->{subsystem} , 'testing' , "Ok tag about testing subsystem is there");
 is($last_call->{extra}->{session}->{user_id} , "something");
 is($last_call->{'sentry.interfaces.User'}->{id} , 123 );
+is($last_call->{'sentry.interfaces.Http'}->{method} , 'GET' );
 
 # use Data::Dumper;
 # diag(Dumper($last_call));

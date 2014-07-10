@@ -1,6 +1,6 @@
 package Log::Log4perl::Appender::Raven;
 {
-  $Log::Log4perl::Appender::Raven::VERSION = '0.002';
+  $Log::Log4perl::Appender::Raven::VERSION = '0.003';
 }
 
 use Moose;
@@ -29,6 +29,8 @@ has 'mdc_tags' => ( is => 'ro' , isa => 'Maybe[Str]' , default => 'sentry_tags' 
 has 'mdc_extra' => ( is => 'ro', isa => 'Maybe[Str]' , default => 'sentry_extra' );
 # Log4perl MDC key to look for user data.
 has 'mdc_user'  => ( is => 'ro' ,isa => 'Maybe[Str]' , default => 'sentry_user' );
+# Log4perl MDC key to look for http data.
+has 'mdc_http' => ( is => 'ro' , isa => 'Maybe[Str]' , default => 'sentry_http' );
 
 my %L4P2SENTRY = ('ALL' => 'info',
                   'TRACE' => 'debug',
@@ -179,6 +181,11 @@ sub log{
         $user = Log::Log4perl::MDC->get($mdc_user);
     }
 
+    my $http;
+    if( my $mdc_http = $self->mdc_http() ){
+        $http = Log::Log4perl::MDC->get($mdc_http);
+    }
+
     # OK WE HAVE THE BASIC Sentry options.
     $self->raven->capture_message($sentry_message,
                                   logger => $sentry_logger,
@@ -187,7 +194,8 @@ sub log{
                                   tags => $tags,
                                   extra => $extra,
                                   Sentry::Raven->stacktrace_context( $caller_frames ),
-                                  ( $user ? Sentry::Raven->user_context(%$user) : () )
+                                  ( $user ? Sentry::Raven->user_context(%$user) : () ),
+                                  ( $http ? Sentry::Raven->request_context( ( delete $http->{url} ) , %$http ) : () )
                                  );
 
     Log::Log4perl::MDC->put(__PACKAGE__.'-reentrance', undef);
@@ -331,6 +339,30 @@ Or specify the MDC key to capture in Config:
    ...
    log4perl.appender.Raven.mdc_user=my_sentry_user
    ...
+
+
+=head2 Configure and use HTTP Request data.
+
+Sentry support HTTP Request structured data that can be added to your event.
+HTTP Data work a bit like tags, except only a number of keys are supported:
+
+url, method, data, query_string, cookies, headers, env
+
+See L<Sentry::Raven> (capture_request) or interface 'Http' in L<http://sentry.readthedocs.org/en/latest/developer/interfaces/index.html>
+for a full description of those keys.
+
+In your code:
+
+  ...
+  Log::Log4perl::MDC->set('sentry_http' , { url => 'http://www.example.com' , method => 'GET' , ... });
+  $log->error("Something very wrong");
+  ...
+
+Or specify the MDC key to capture in Config:
+
+  ...
+  log4perl.appender.Raven.mdc_http=my_sentry_http
+  ...
 
 =head2 Configure and use Dynamic Extra
 
