@@ -1,0 +1,191 @@
+==================================================
+Changes from 2013-07-10 00:00:00 +0000 to present.
+==================================================
+
+------------------------------------------
+version 0.001 at 2014-07-10 12:02:01 +0000
+------------------------------------------
+
+  Change: 54bff5f8960ad1d4d11d7d81951f692d36892efc
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 12:58:45 +0000
+
+    Tested it works with Log::Any 
+
+  Change: 87a2c3cb8e5c94f766bde840c616247689a05bba
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 12:49:39 +0000
+
+    Added doc about infect_die 
+
+  Change: a79154201852a4da6549157d9772ee5d96780ea0
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 12:27:24 +0000
+
+    Demo infect_die 
+
+  Change: bc56e47047358f9b0aa444718a8f68ab500dde7a
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 12:19:34 +0000
+
+    Added infect_die method 
+
+  Change: 6ee7f4155b8f6ee9090458ba764b5ac1b0aa735c
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 10:10:23 +0000
+
+    Ignore build files 
+
+  Change: 0cf5149779d0b43e998d81cc5d91b3f8ed326cce
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 09:59:52 +0000
+
+    Skip Dist::Zilla test 
+
+  Change: b30ac5208c93c9a259f9c0a03a9a3861190dfaee
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 09:58:17 +0000
+
+    Default tags, extra and user MDC keys 
+
+  Change: 70703e871067fab4361c4f6245fd17719fcfbd55
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 09:35:58 +0000
+
+    No perl 5.8 in travis (Git plugin not compatible) 
+
+  Change: 85b5e809086b7c867192a30e18198a43a9b2de59
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-10 09:27:36 +0000
+
+    Better doc + travis 
+
+  Change: 7f433b8aaae6a7de31dd5df95a72945187f7db37
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 18:39:09 +0000
+
+    Added user support 
+
+  Change: 30174a1755931ec670cd1a4feeec3ab16e070aa2
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 18:22:17 +0000
+
+    Stack is better 
+
+  Change: 39c4c95e6fb23d407b63ee81beef806f135086e8
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 18:14:01 +0000
+
+    Added demo 
+
+  Change: c514fb16b5d3f8f7c68ce899740c84018e6ec4e9
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 18:03:22 +0000
+
+    Added demo 
+
+  Change: e66d87cf5eed164f8f6d6f718e32037e24b1fd6a
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 17:39:18 +0000
+
+    Added doc about timeout 
+
+  Change: 5cc67c86f8c4bd1e1b7aea7a5d33bcc7e70820cf
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 17:30:58 +0000
+
+    Added warning in doc 
+
+  Change: 44b78157d348131a56da2d69f7bedaf479918f81
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 17:26:51 +0000
+
+    Better doc 
+
+  Change: 95ac9ff996274a8ba08a3f209f1cd4dfd0f0e5dc
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 17:17:35 +0000
+
+    Added extra support 
+
+  Change: b93866b893d5934f3fded76890c598abb89ea303
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 17:10:13 +0000
+
+    Better cpanfile 
+
+  Change: 7f81809d74edc89b25be58ec114fa981bc0d3daa
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 16:39:18 +0000
+
+    Added doc 
+
+  Change: cb590c9625e6164e6f894f747a5438665da6046e
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 16:25:15 +0000
+
+    Nicer test 
+
+  Change: 86fd53bd23c7c7c081c3ab35f7585171ad1cbba7
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 16:22:33 +0000
+
+    Added context and dynamic tags via MDC 
+
+  Change: 3e07ef2e54edd30250fcb1886d2ead8fd17aee47
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 15:35:21 +0000
+
+    Nicer test 
+
+  Change: d0be65af4141f53b91fe1e041feece03c1a3b074
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 15:12:22 +0000
+
+    Allow setting the Sentry DSN via environment 
+
+  Change: a2fffbe2dcadcc0744f44c79ab1b762ce90e0586
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 13:25:57 +0000
+
+    Take SENTRY_DSN ENV variable into account for live testing 
+
+  Change: 9828f7b6a732e7bdc6c4b231ccb055be1363b024
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 13:21:21 +0000
+
+    First sending to Sentry 
+
+  Change: 77895e1a050c1eac2800e43cad2e38a5c3b62cb3
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 12:10:29 +0000
+
+    Calculate a good stack 
+
+  Change: 4f7a05297fbc2f356a94f4662910d50ccecf4d56
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 11:33:22 +0000
+
+    Start debugging the data we can gather 
+
+  Change: 18ada5d4dec9040e0b5d4ffb47aa3d813e5fee13
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 11:14:44 +0000
+
+    Ok building from config just works 
+
+  Change: d3ea5675b36cedb78dcb6a2b1f9191ab187e9111
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 11:02:30 +0000
+
+    Basic building 
+
+  Change: cc81dd2c76f9e11c434d7e20e706786489c1a2c3
+  Author: Jerome Eteve <jerome@broadbean.com>
+  Date : 2014-07-09 10:42:14 +0000
+
+    Inception 
+
+================
+End of releases.
+================

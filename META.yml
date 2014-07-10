@@ -1,0 +1,29 @@
+---
+abstract: 'Store chunks of logs in key/value stores.'
+author:
+  - 'Jerome Eteve <jerome.eteve@gmail.com>'
+build_requires:
+  Log::Any: 0
+  Log::Any::Adapter::Log4perl: 0
+  Test::Fatal: 0
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.009, CPAN::Meta::Converter version 2.133380'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Log-Log4perl-Appender-Raven
+requires:
+  Carp: 1.26
+  Data::Dumper: 0
+  Devel::StackTrace: 1.27
+  Log::Log4perl: 1.24
+  Moose: 2.0801
+  Sentry::Raven: 0.05
+resources:
+  homepage: https://github.com/jeteve/l4p-appender-raven
+  repository: https://github.com/jeteve/l4p-appender-raven.git
+version: 0.001
